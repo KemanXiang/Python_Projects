@@ -1,8 +1,8 @@
 # Project: Insurance Cost Analysis
 
 In this project, we will perform data analytics on a medical insurance charges dataset. This is a filtered and modified version of the 
-Medical Insurance Price Prediction dataset, available under the CC0 1.0 Universal License on the Kaggle website.
-Link: https://www.kaggle.com/datasets/harishkumardatalab/medical-insurance-price-prediction?resource=download
+Medical Insurance Price Prediction dataset, available under the CC0 1.0 Universal License on the Kaggle website. \
+Check this link if interested: https://www.kaggle.com/datasets/harishkumardatalab/medical-insurance-price-prediction?resource=download
 
 ## Parameters
 The parameters used in the dataset are:
