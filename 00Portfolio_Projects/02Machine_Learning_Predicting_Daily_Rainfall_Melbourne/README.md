@@ -11,7 +11,7 @@
 ## Project Overview
 
 This project develops an earlier rainfall-classification exercise from
-the **IBM Data Science Professional Certificate** into a more rigorous
+the **IBM Machine Learning Certificate** into a more rigorous
 machine-learning portfolio study focused on methodological validity,
 reproducibility, and interpretation.
 
