@@ -212,7 +212,7 @@ design, empirical validity, and critical interpretation**.
 ├── Predicting_Daily_Rainfall_Melbourne_Temporal_Validation_Model_Comparison_FINAL.ipynb
 │   └── Fully executed technical notebook with code, outputs, tables, and figures
 │
-├── Predicting_Daily_Rainfall_Melbourne_Portfolio_Report.docx
+├── Predicting_Daily_Rainfall_Melbourne_Portfolio_Report.pdf
 │   └── Companion research-style report for academic/portfolio review
 │
 ├── weatherAUS_2.csv
@@ -222,23 +222,12 @@ design, empirical validity, and critical interpretation**.
     └── Project overview and navigation
 ```
 
-> **Data note:** If the source dataset is not redistributed in the
-> public repository, place `weatherAUS_2.csv` locally before executing
-> the notebook and document the dataset source instead.
-
 ## Reproducibility
 
 The notebook is fully executed and contains the outputs underlying the
 reported results. Preprocessing is embedded inside scikit-learn
 pipelines so that imputation, scaling, and encoding are estimated only
 from the appropriate training data.
-
-For archival reproducibility, keep the dataset in the same directory as
-the notebook using the filename:
-
-``` text
-weatherAUS_2.csv
-```
 
 ## Limitations
 
@@ -260,7 +249,7 @@ weatherAUS_2.csv
 ## Project Provenance
 
 This project originated from a rainfall-classification exercise
-completed as part of the **IBM Data Science Professional Certificate**.
+completed as part of the **IBM Machine Learning Certificate**.
 
 The original exercise established the technical foundation: data
 preprocessing, scikit-learn pipelines, `GridSearchCV`, Random Forest and
@@ -287,7 +276,7 @@ provenance**, not as results from the redesigned temporal experiment.
 
 ## Portfolio Artifacts
 
-For academic or PhD-application review, the project is designed to be
+For academic review, the project is designed to be
 read at three levels:
 
 **1. README --- quick orientation**\
