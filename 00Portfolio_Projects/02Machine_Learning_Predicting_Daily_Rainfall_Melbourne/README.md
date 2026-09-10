@@ -133,15 +133,15 @@ perform on the future?**
 Held-out permutation importance identified the following variables as
 the strongest contributors to final-test Average Precision:
 
-  Feature           Mean Permutation Importance
-  --------------- -----------------------------
-  Pressure3pm                            0.1487
-  Humidity3pm                            0.1111
-  WindGustSpeed                          0.0896
-  Sunshine                               0.0694
-  Cloud3pm                               0.0195
-  Pressure9am                            0.0178
-  MaxTemp                                0.0101
+  |Feature        |   Mean Permutation Importance|
+  |---------------|-----------------------------|
+  |Pressure3pm    |                        0.1487|
+  |Humidity3pm     |                       0.1111|
+  |WindGustSpeed   |                       0.0896|
+  |Sunshine        |                       0.0694|
+  |Cloud3pm        |                       0.0195|
+  |Pressure9am     |                       0.0178|
+  |MaxTemp         |                       0.0101|
 
 These results measure **predictive reliance**, not causal effects.
 Correlated meteorological variables may also share or mask importance.
