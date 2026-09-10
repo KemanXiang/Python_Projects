@@ -41,20 +41,20 @@ realistic out-of-sample evaluation?**
 
 ## Key Results
 
-  Result                                        Final 2017 Test
-  ------------------------------- -----------------------------
-  Selected model                    Histogram Gradient Boosting
-  Test observations                                         526
-  Rainfall prevalence                                     18.6%
-  Accuracy                                            **85.7%**
-  Balanced Accuracy                                   **0.676**
-  Rainfall Precision                                  **0.717**
-  Rainfall Recall                                     **0.388**
-  Rainfall F1                                         **0.503**
-  ROC-AUC                                             **0.841**
-  Average Precision                                   **0.611**
-  Brier Score                                         **0.109**
-  Validation-selected threshold                       **0.438**
+  |Result|                                      Final 2017 Test|
+  |------------------------------| ----------------------------|
+  |Selected model                |    Histogram Gradient Boosting|
+  |Test observations              |                           526|
+  |Rainfall prevalence             |                        18.6%|
+  |Accuracy                         |                   **85.7%**|
+  |Balanced Accuracy                 |                  **0.676**|
+  |Rainfall Precision                 |                 **0.717**|
+  |Rainfall Recall                     |                **0.388**|
+  |Rainfall F1                          |               **0.503**|
+  |ROC-AUC                               |              **0.841**|
+  |Average Precision                      |             **0.611**|
+  |Brier Score                             |            **0.109**|
+  |Validation-selected threshold            |           **0.438**|
 
 The selected model retained strong ranking ability on the untouched 2017
 period, with **ROC-AUC = 0.841** and **Average Precision = 0.611**.
@@ -95,20 +95,11 @@ instability in minority-event detection.
 
 On the 2016 validation period:
 
-  -------------------------------------------------------------------------------
-  Model          Accuracy   Balanced       Rain    Rain F1    ROC-AUC     Average
-                            Accuracy     Recall                         Precision
-  ------------ ---------- ---------- ---------- ---------- ---------- -----------
-  Histogram         0.816      0.746      0.587      0.640      0.861   **0.728**
-  Gradient                                                            
-  Boosting                                                            
-
-  Random            0.819      0.740      0.561      0.633      0.860       0.718
-  Forest                                                              
-
-  Logistic          0.802      0.742      0.605      0.631      0.842       0.689
-  Regression                                                          
-  -------------------------------------------------------------------------------
+  |Model       |   Accuracy |  Balanced Accuracy | Rain Recall |  Rain F1 |   ROC-AUC  |   Average Precision|                                                       
+  |------------| ----------| --------------------|-------------|----------|------------|--------------------|
+  |Histogram Gradient Boosting|0.816|  0.746     |   0.587     |  0.640   |    0.861   |       **0.728**    |
+  |Random Forest|    0.819 |     0.740           |  0.561      |   0.633  |    0.860   |        0.718       |
+  |Logistic Regression| 0.802 |     0.742        |  0.605      |  0.631    |   0.842   |        0.689       |                                                       
 
 **Histogram Gradient Boosting** was selected using validation Average
 Precision. The differences among the candidate models are relatively
