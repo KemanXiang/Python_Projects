@@ -21,7 +21,7 @@ A companion research-style report integrates the empirical findings,
 methodology, interpretation, limitations, and business relevance without
 duplicating the notebooks cell by cell.
 
-------------------------------------------------------------------------
+---
 
 ## Project Objectives
 
@@ -37,7 +37,7 @@ The analysis addresses five questions:
 5.  Which regression specification provides the strongest balance of
     predictive performance, stability, interpretability, and parsimony?
 
-------------------------------------------------------------------------
+---
 
 ## Dataset
 
@@ -57,14 +57,12 @@ Automotive Yearbook**.
 -   UCI Machine Learning Repository:
     https://archive.ics.uci.edu/dataset/10/automobile
 -   Dataset DOI: https://doi.org/10.24432/C5B01C
--   IBM Skills Network-hosted CSV used in the project:
-    https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0101EN-SkillsNetwork/labs/Data%20files/auto.csv
 
 > **Important:** This is a small historical automobile dataset. The
 > results should not be interpreted as a contemporary vehicle-pricing
 > model.
 
-------------------------------------------------------------------------
+---
 
 ## Repository Workflow
 
@@ -107,17 +105,17 @@ examination of overlap among candidate predictors.
 
 #### Selected EDA Findings
 
-  Feature         Pearson correlation with price
-  ------------- --------------------------------
-  Engine size                          **0.872**
-  Curb weight                          **0.834**
-  Horsepower                           **0.810**
-  Width                                **0.751**
-  Highway MPG                         **-0.705**
-  Length                               **0.691**
-  City MPG                            **-0.687**
-  Wheel base                           **0.585**
-  Bore                                 **0.543**
+  |Feature       |  Pearson correlation with price|
+  |--------------|--------------------------------|
+  |Engine size   |                       **0.872**|
+  |Curb weight   |                       **0.834**|
+  |Horsepower    |                       **0.810**|
+  |Width         |                       **0.751**|
+  |Highway MPG   |                      **-0.705**|
+  |Length        |                       **0.691**|
+  |City MPG      |                      **-0.687**|
+  |Wheel base    |                       **0.585**|
+  |Bore          |                       **0.543**|
 
 The analysis indicates that price is strongly associated with **engine
 capacity, vehicle mass, power, physical size, and fuel economy**.
@@ -143,24 +141,13 @@ measures of predictive performance.
 
 #### In-Sample Model Development Results
 
-  -----------------------------------------------------------------------
-  Model                          R²               RMSE                MAE
-  -------------- ------------------ ------------------ ------------------
-  **Multiple              **0.809**        **\$3,461**        **\$2,451**
-  Linear                                               
-  Regression ---                                       
-  4 Predictors**                                       
-
-  SLR --- Engine              0.761            \$3,872            \$2,794
-  Size                                                 
-
-  Polynomial ---              0.674            \$4,523            \$3,201
-  Highway MPG                                          
-  (Degree 3)                                           
-
-  SLR ---                     0.497            \$5,616            \$3,821
-  Highway MPG                                          
-  -----------------------------------------------------------------------
+  |Model         |                 R²|               RMSE      |        MAE  |
+  |--------------| ------------------|-------------------------|-------------|
+  |**Multiple Linear Regression - 4 Predictors**|**0.809**|**\$3,461**|**\$2,451**|
+  |SLR - Engine Size|       0.761     |       \$3,872          |  \$2,794|
+  |Polynomial - Highway MPG (Degree 3)|0.674|         \$4,523  |   \$3,201|
+  |SLR - Highway MPG|          0.497  |          \$5,616       |    \$3,821|
+                                            
 
 ### 05 --- Regression Model Evaluation & Selection
 
@@ -190,29 +177,17 @@ bias-variance trade-off**.
 
 Selected polynomial: **Highway MPG Polynomial Regression --- Degree 6**
 
-------------------------------------------------------------------------
+---
 
 ## Final Model Comparison
 
-  --------------------------------------------------------------------------
-  Model              Holdout R²   Holdout RMSE    Holdout MAE     Mean CV R²
-  -------------- -------------- -------------- -------------- --------------
-  **Multiple          **0.764**    **\$5,377**    **\$3,769**      **0.767**
-  Linear                                                      
-  Regression ---                                              
-  4 Predictors**                                              
-
-  SLR --- Engine          0.725        \$5,805        \$3,557          0.718
-  Size                                                        
-
-  Polynomial ---          0.546        \$7,453        \$4,486          0.658
-  Highway MPG                                                 
-  (Degree 6)                                                  
-
-  SLR ---                 0.425        \$8,391        \$5,227          0.444
-  Highway MPG                                                 
-  --------------------------------------------------------------------------
-
+    |Model         |       Holdout R²|   Holdout RMSE     |        Holdout MAE  | Mean CV R² |
+  |--------------| ------------------|-------------------------|-------------|---------------|
+  |**Multiple Linear Regression - 4 Predictors**|**0.764**|**\$5,377**|**\$3,769**|**0.767**|
+  |SLR - Engine Size|       0.725     |       \$5,805          |  \$3,557|0.718|
+  |Polynomial - Highway MPG (Degree 6)|0.546 |       \$7,453  |   \$4,486|0.658|
+  |SLR - Highway MPG|          0.425  |          \$8,391       |  \$5,227|0.444|
+  
 The **four-predictor Multiple Linear Regression** is the preferred final
 specification. It leads both the untouched holdout comparison and the
 mean cross-validation comparison.
@@ -222,7 +197,7 @@ meaningful automobile characteristics provides greater generalizable
 value than adding increasingly complex nonlinear structure to highway
 MPG alone.
 
-------------------------------------------------------------------------
+---
 
 ## Key Analytical Findings
 
@@ -246,7 +221,7 @@ pricing**: price differences in this historical sample are associated
 with multiple dimensions of vehicle power, capacity, physical size,
 weight, and efficiency.
 
-------------------------------------------------------------------------
+---
 
 ## Analytical Interpretation
 
@@ -266,7 +241,7 @@ This illustrates an important analytical principle:
 Regression coefficients in this project are therefore interpreted as
 **conditional associations**, not causal effects.
 
-------------------------------------------------------------------------
+---
 
 ## Methods and Python Skills Demonstrated
 
@@ -301,7 +276,7 @@ training-versus-validation comparison, polynomial complexity analysis,
 overfitting diagnosis, holdout evaluation, model comparison, and
 parsimony-based model selection.
 
-------------------------------------------------------------------------
+---
 
 ## Project Structure
 
@@ -317,19 +292,19 @@ automobile-pricing-analytics/
 ├── auto.csv
 ├── auto_cleaned.csv
 │
-├── Automobile_Pricing_Analytics_Portfolio_Report.docx
+├── 00_Automobile_Pricing_Analytics_Portfolio_Report.pdf
 └── README.md
 ```
 
 The notebook numbering indicates the intended execution and analytical
 sequence.
 
-------------------------------------------------------------------------
+---
 
 ## Research-Style Companion Report
 
 The repository also includes
-**`Automobile_Pricing_Analytics_Portfolio_Report.docx`**.
+**`Automobile_Pricing_Analytics_Portfolio_Report.pdf`**.
 
 The report presents the project as an integrated empirical study rather
 than repeating notebook cells. It covers the analytical motivation,
@@ -342,7 +317,7 @@ The notebooks serve as the **reproducible analytical evidence**, while
 the report provides the **research-style interpretation and
 communication**.
 
-------------------------------------------------------------------------
+---
 
 ## Limitations
 
@@ -368,7 +343,7 @@ categorical controls, formal multicollinearity diagnostics, log-price
 specifications, robust regression diagnostics, and validation using a
 larger contemporary automobile dataset.
 
-------------------------------------------------------------------------
+---
 
 ## Why This Project Matters for Business Analytics
 
@@ -389,7 +364,7 @@ These capabilities are applicable to **pricing analytics, product
 analytics, market research, demand analysis, risk analytics, and
 empirical business research**.
 
-------------------------------------------------------------------------
+---
 
 ## Reproducibility
 
@@ -401,7 +376,7 @@ empirical business research**.
 5.  Compare the generated results with the research-style companion
     report.
 
-------------------------------------------------------------------------
+---
 
 ## Tools and Libraries
 
@@ -413,7 +388,7 @@ empirical business research**.
 -   Matplotlib
 -   scikit-learn
 
-------------------------------------------------------------------------
+---
 
 ## Citation
 
@@ -422,7 +397,7 @@ empirical business research**.
 
 UCI dataset page: https://archive.ics.uci.edu/dataset/10/automobile
 
-------------------------------------------------------------------------
+---
 
 ## Author's Note
 
