@@ -181,8 +181,8 @@ Selected polynomial: **Highway MPG Polynomial Regression --- Degree 6**
 
 ## Final Model Comparison
 
-    |Model         |       Holdout R²|   Holdout RMSE     |        Holdout MAE  | Mean CV R² |
-  |--------------| ------------------|-------------------------|-------------|---------------|
+|Model         |       Holdout R²|   Holdout RMSE     |        Holdout MAE  | Mean CV R² |
+  |--------------|------------------|-------------------------|-------------|---------------|
   |**Multiple Linear Regression - 4 Predictors**|**0.764**|**\$5,377**|**\$3,769**|**0.767**|
   |SLR - Engine Size|       0.725     |       \$5,805          |  \$3,557|0.718|
   |Polynomial - Highway MPG (Degree 6)|0.546 |       \$7,453  |   \$4,486|0.658|
@@ -392,7 +392,7 @@ empirical business research**.
 
 ## Citation
 
-> Schlimmer, J. (1985). *Automobile* [Dataset](#dataset). UCI Machine
+> Schlimmer, J. (1985). *Automobile* [Dataset](#dataset). UCI Machine <br>
 > Learning Repository. https://doi.org/10.24432/C5B01C
 
 UCI dataset page: https://archive.ics.uci.edu/dataset/10/automobile
