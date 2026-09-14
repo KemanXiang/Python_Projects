@@ -43,6 +43,8 @@ preprocessing rather than being silently removed.
 > citizenship/origin. The observations represent **immigration flows**,
 > not Canada's resident immigrant stock.
 
+<img width="3217" height="1294" alt="canada_immigration_total_1980_2013" src="https://github.com/user-attachments/assets/ebde34ec-1ead-436e-a497-7446b9f04647" />
+
 ---
 
 ## Analytical Questions
