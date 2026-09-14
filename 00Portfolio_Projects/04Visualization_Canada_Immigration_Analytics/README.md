@@ -1,7 +1,7 @@
 # Canada Immigration Visual Analytics with Python
 
-A visualization-centered data analytics portfolio project examining
-international immigration flows to Canada from **1980 to 2013** using
+A **visualization-centered data analytics** portfolio project examining
+**international immigration flows to Canada** from **1980 to 2013** using
 **Pandas, Matplotlib, Seaborn, and Folium**.
 
 Rather than treating visualization as a final presentation step, this
@@ -12,11 +12,11 @@ concentration and variability, and mapping the geographic structure of
 immigration origins.
 
 The project was developed as part of a **Business Analytics / Data
-Analytics portfolio** and is designed to demonstrate Python-based
-exploratory analysis, statistical visualization, geospatial
-visualization, data preparation, and analytical communication.
+Analytics portfolio** and is designed to demonstrate **Python-based
+exploratory analysis**, **statistical visualization**, **geospatial
+visualization**, **data preparation**, and **analytical communication**.
 
-------------------------------------------------------------------------
+---
 
 ## Project Overview
 
@@ -43,12 +43,11 @@ preprocessing rather than being silently removed.
 > citizenship/origin. The observations represent **immigration flows**,
 > not Canada's resident immigrant stock.
 
-------------------------------------------------------------------------
+---
 
 ## Analytical Questions
 
-The project is question-driven rather than organized as a catalog of
-plotting functions. It investigates questions including:
+The project is **question-driven**. It investigates questions including:
 
 1.  How did total identified international immigration to Canada change
     over time?
@@ -108,7 +107,7 @@ Canada.xlsx
     └── change in immigration share
 ```
 
-------------------------------------------------------------------------
+---
 
 ## Notebooks
 
@@ -135,9 +134,8 @@ project.
 
 ### `02_Exploratory_Visual_Analytics_Canada_Immigration.ipynb`
 
-The main exploratory analysis notebook. It consolidates the useful
-material from the original line, area, histogram, bar, box, scatter,
-bubble, and direct-Matplotlib exercises into one analytical workflow.
+The main exploratory analysis notebook. It creates line, area, histogram, bar, box, scatter,
+bubble, and direct-Matplotlib graphs for analytical purpose.
 
 Major visual analyses include:
 
@@ -151,7 +149,7 @@ Major visual analyses include:
 -   an annotated Haiti case around the 2010 earthquake period.
 
 Pandas is used primarily for transformation and aggregation, while
-Matplotlib provides direct control over the final visualizations.
+**Matplotlib** provides direct control over the final visualizations.
 
 ### `03_Advanced_Statistical_Visualization_Canada_Immigration.ipynb`
 
@@ -170,13 +168,9 @@ Analyses include:
 The fitted regression line is used only as a **descriptive visual
 summary**, not as a forecasting or causal model.
 
-WordCloud and repeated Waffle-chart exercises from the original
-instructional material were intentionally removed because they added
-less analytical precision than the retained visualizations.
-
 ### `04_Geospatial_Visualization_Canada_Immigration.ipynb`
 
-Concludes the project with interactive geospatial analysis using Folium.
+Concludes the project with **interactive geospatial analysis** using **Folium**.
 
 The notebook:
 
@@ -191,7 +185,7 @@ The notebook:
 This stage demonstrates that geographic linkage itself is part of the
 analytical workflow rather than an invisible preprocessing step.
 
-------------------------------------------------------------------------
+---
 
 ## Selected Findings
 
@@ -226,47 +220,28 @@ identifies patterns and relationships but does not claim to explain the
 policy, economic, political, or demographic mechanisms that produced
 them.
 
-------------------------------------------------------------------------
+---
 
 ## Visualization Strategy
 
 A central design principle of the project is that chart selection should
 follow the analytical question.
 
-  -----------------------------------------------------------------------
-  Analytical objective                Visualization
-  ----------------------------------- -----------------------------------
-  Trend through time                  Line chart
+  |Analytical objective                |Visualization                      |
+  |------------------------------------|-----------------------------------|
+  |Trend through time                  |Line chart|
+  |Rank source countries               |Horizontal bar chart|
+  |Compare country trajectories        |Multi-series line chart|
+  |Show composition through time       |Stacked area chart|
+  |Examine cross-country distribution  |Histogram / boxplot / violin plot|
+  |Quantify concentration              |Cumulative concentration curve|
+  |Compare scale and variability       |Scatter / bubble-style chart|
+  |Compare normalized composition      |Percentage heatmap|
+  |Compare temporal patterns independent of scale |Z-score heatmap|
+  |Summarize association               |Regression / correlation visualization|
+  |**Examine spatial structure**       |**Interactive choropleth**|
 
-  Rank source countries               Horizontal bar chart
-
-  Compare country trajectories        Multi-series line chart
-
-  Show composition through time       Stacked area chart
-
-  Examine cross-country distribution  Histogram / boxplot / violin plot
-
-  Quantify concentration              Cumulative concentration curve
-
-  Compare scale and variability       Scatter / bubble-style chart
-
-  Compare normalized composition      Percentage heatmap
-
-  Compare temporal patterns           Z-score heatmap
-  independent of scale                
-
-  Summarize association               Regression / correlation
-                                      visualization
-
-  Examine spatial structure           Interactive choropleth
-  -----------------------------------------------------------------------
-
-The project intentionally avoids reproducing the same graph through both
-Pandas and Matplotlib simply to demonstrate syntax. It also omits chart
-types when a more precise visual encoding answers the analytical
-question better.
-
-------------------------------------------------------------------------
+---
 
 ## Interactive Geospatial Outputs
 
@@ -289,6 +264,8 @@ report for environments where interactive HTML is not rendered directly.
 ``` text
 Canada_Immigration_Visual_Analytics/
 │
+├── 00_Canada_Immigration_Python_Visualization_Portfolio_Report.pdf
+│
 ├── 01_Data_Preparation_Canada_Immigration.ipynb
 ├── 02_Exploratory_Visual_Analytics_Canada_Immigration.ipynb
 ├── 03_Advanced_Statistical_Visualization_Canada_Immigration.ipynb
@@ -299,7 +276,7 @@ Canada_Immigration_Visual_Analytics/
 │   ├── canada_immigration_clean.csv
 │   └── world_countries.geojson
 │
-├── maps/
+├── map_html/
 │   ├── canada_immigration_total_1980_2013.html
 │   ├── canada_immigration_2013.html
 │   └── canada_immigration_share_change_1980_2013.html
@@ -309,14 +286,10 @@ Canada_Immigration_Visual_Analytics/
 │   ├── canada_immigration_2013.png
 │   └── canada_immigration_share_change_1980_2013.png
 │
-├── Canada_Immigration_Python_Visualization_Portfolio_Report_Rich.docx
 └── README.md
 ```
 
-The exact folder organization can be adjusted without changing the
-analytical workflow.
-
-------------------------------------------------------------------------
+---
 
 ## Technologies
 
@@ -331,7 +304,7 @@ analytical workflow.
     linkage
 -   **Jupyter Notebook** --- reproducible analytical workflow
 
-------------------------------------------------------------------------
+---
 
 ## Reproducibility
 
@@ -358,7 +331,7 @@ jupyter notebook
 
 Run Notebook 01 first, followed by Notebooks 02--04.
 
-------------------------------------------------------------------------
+---
 
 ## Data Source
 
@@ -378,7 +351,7 @@ aliases are handled explicitly in Notebook 04 because geographic
 datasets and migration datasets do not always use identical naming
 conventions.
 
-------------------------------------------------------------------------
+---
 
 ## Methodological Limitations
 
@@ -403,7 +376,7 @@ Several limitations should be considered when interpreting the results:
 These limitations are addressed where possible through complementary
 visualizations rather than relying on any single chart.
 
-------------------------------------------------------------------------
+---
 
 ## Portfolio Relevance
 
@@ -434,13 +407,13 @@ but also the ability to identify patterns, evaluate evidence, and
 communicate complex information clearly for research and
 decision-making.
 
-------------------------------------------------------------------------
+---
 
 ## Companion Report
 
 A research-style companion report is included in the repository:
 
-**`Canada_Immigration_Python_Visualization_Portfolio_Report_Rich.docx`**
+**`Canada_Immigration_Python_Visualization_Portfolio_Report.pdf`**
 
 The report presents the motivation, methodology, empirical findings,
 visualization rationale, limitations, and relevance to business/data
@@ -448,7 +421,7 @@ analytics without duplicating the notebooks cell by cell. It also
 incorporates the major exploratory, statistical, and geospatial
 visualizations as a standalone portfolio document.
 
-------------------------------------------------------------------------
+---
 
 ## Project Positioning
 
