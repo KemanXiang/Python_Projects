@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is an end-to-end data analytics and machine learning portfolio built around historical SpaceX Falcon 9 launch and first-stage landing data.
+This project is an **end-to-end data analytics** and **model building portfolio** built around **historical SpaceX Falcon 9 launch and first-stage landing data**.
 
 It was developed from the IBM Data Science Professional Certificate capstone and then substantially refined into a research-oriented portfolio project. The final workflow demonstrates the full analytics lifecycle:
 
@@ -30,7 +30,7 @@ The project approaches this question by collecting and reconciling launch data f
 
 `01Space-X_Data_Collection_API.ipynb`
 
-The first stage collects historical SpaceX launch data through the SpaceX API and enriches launch records with related rocket, payload, launchpad, and core information.
+The first stage collects historical SpaceX launch data through the **SpaceX API** and enriches launch records with related rocket, payload, launchpad, and core information.
 
 Because the API endpoints used in the original analysis later became unavailable, this notebook preserves the original successful execution and historical outputs rather than replacing them with new external data.
 
@@ -42,7 +42,7 @@ Because the API endpoints used in the original analysis later became unavailable
 
 A second source is collected from an archived Wikipedia page containing Falcon 9 launch records.
 
-The portfolio version improves the original scraping logic with timeout/error handling, schema-based table detection, reusable parsing functions, validation of dates/missingness/duplicates, and archived execution support.
+The portfolio notebook includes timeout/error handling, schema-based table detection, reusable parsing functions, validation of dates/missingness/duplicates, and archived execution support.
 
 **Skills:** `requests`, `BeautifulSoup`, `pandas.read_html`, HTML parsing, defensive scraping.
 
@@ -50,7 +50,7 @@ The portfolio version improves the original scraping logic with timeout/error ha
 
 `03Space-X_Data_Wrangling.ipynb`
 
-The raw launch data is cleaned and transformed into an analysis-ready dataset. A major improvement is the construction of the landing-success target from explicit semantic outcome rules rather than positional assumptions.
+The raw launch data is **cleaned** and **transformed** into an analysis-ready dataset. A major improvement is the construction of the landing-success target from explicit semantic outcome rules rather than positional assumptions.
 
 Final modeling sample:
 
@@ -65,7 +65,7 @@ Final modeling sample:
 
 `04Space-X_EDA_SQL_Sqllite.ipynb`
 
-This stage preserves the original SQL workflow:
+SQL workflow:
 
 **CSV → pandas → SQLite staging table → cleaned SQL analysis table → exploratory queries**
 
@@ -84,12 +84,12 @@ Selected findings:
 
 `05Space-X_EDA_Data_Visualization.ipynb`
 
-This notebook explores landing success by flight number, payload mass, launch site, orbit, launch year, and operational characteristics, then creates the one-hot encoded feature matrix used for machine learning.
+This notebook explores landing success by **flight number, payload mass, launch site, orbit, launch year, and operational characteristics**, then creates the **one-hot encoded** feature matrix used for machine learning.
 
 Selected results from the 90-mission modeling dataset:
 
 | Launch Site | Observed Success Rate |
-|---|---:|
+|---|---|
 | KSC LC 39A | 77.3% |
 | VAFB SLC 4E | 76.9% |
 | CCAFS SLC 40 | 60.0% |
@@ -97,7 +97,7 @@ Selected results from the 90-mission modeling dataset:
 Payload success rates are non-linear:
 
 | Payload Band | Success Rate |
-|---|---:|
+|---|---|
 | 0–2,000 kg | 58.3% |
 | 2,000–4,000 kg | 69.2% |
 | 4,000–6,000 kg | 52.9% |
@@ -120,12 +120,12 @@ Yearly success improved strongly but not monotonically:
 
 `06Space-X_Folium_Visualization_Launch_Site_Location.ipynb`
 
-The geospatial stage uses Folium to map launch sites, landing outcomes, and proximity references. The final portfolio version uses an **Esri World Street Map** basemap for deeper street-level context.
+The geospatial stage uses **Folium** to map **launch sites, landing outcomes, and proximity references**. The portfolio uses an **Esri World Street Map** basemap for deeper street-level context.
 
 The 56-record geospatial snapshot gives these observed site rates:
 
 | Launch Site | Success Rate |
-|---|---:|
+|---|---|
 | KSC LC-39A | 76.9% |
 | CCAFS SLC-40 | 42.9% |
 | VAFB SLC-4E | 40.0% |
@@ -144,11 +144,9 @@ These are descriptive reference distances, not GIS nearest-neighbor estimates.
 
 `07SpaceX_Dashboard_DashApp.ipynb`
 
-The dashboard allows users to select launch sites, filter payload ranges, compare success/failure composition, and explore payload mass versus landing outcome by booster category.
+The dashboard allows users to **select launch sites, filter payload ranges, compare success/failure composition, and explore payload mass versus landing outcome by booster category**.
 
-The portfolio refactor also corrects the original all-sites pie chart so that it actually counts successful landing records.
-
-Audited findings from the 56-row dashboard dataset:
+Findings from the 56-row dashboard dataset:
 
 - KSC LC-39A has the most successful landings: **10**
 - KSC LC-39A has the highest observed site rate: **76.9%**
@@ -165,14 +163,14 @@ Audited findings from the 56-row dashboard dataset:
 
 This is the most important analytical stage.
 
-The original IBM notebook compared Logistic Regression, SVM, Decision Tree, and KNN on a single 18-observation test set, where all four reported **83.33% accuracy**.
+The original IBM notebook compared **Logistic Regression, SVM, Decision Tree, and KNN** on a single 18-observation test set, where all four reported **83.33% accuracy**.
 
-The portfolio version strengthens the evaluation with leakage-safe pipelines, a majority-class baseline, repeated nested stratified cross-validation, multiple metrics, temporal holdout testing, and interpretable feature analysis.
+The portfolio version strengthens the evaluation with **leakage-safe pipelines, a majority-class baseline, repeated nested stratified cross-validation, multiple metrics, temporal holdout testing, and interpretable feature analysis**.
 
 #### Repeated nested cross-validation
 
 | Model | Accuracy | Balanced Accuracy | Failure Recall | Success Recall | F1 | ROC-AUC |
-|---|---:|---:|---:|---:|---:|---:|
+|---|---|---|---|---|---|---|
 | Decision Tree | 0.829 | **0.800** | **0.713** | 0.887 | 0.873 | 0.846 |
 | SVM | **0.838** | 0.792 | 0.653 | **0.930** | **0.884** | **0.878** |
 | Logistic Regression | 0.807 | 0.767 | 0.647 | 0.887 | 0.858 | 0.864 |
@@ -193,7 +191,7 @@ Latest 18 missions:
 - period: **2020-01-19 to 2020-11-05**
 
 | Model | Accuracy | Balanced Accuracy | Failure Recall | Success Recall |
-|---|---:|---:|---:|---:|
+|---|---|---|---|---|
 | Logistic Regression | 0.889 | 0.667 | 0.333 | 1.000 |
 | SVM | 0.889 | 0.667 | 0.333 | 1.000 |
 | Decision Tree | 0.889 | 0.667 | 0.333 | 1.000 |
@@ -206,15 +204,14 @@ The key lesson is that **high accuracy can be misleading when later missions are
 
 ---
 
-## Research Contribution of the Portfolio Version
+## Research Contribution of the Portfolio
 
 The main contribution of this portfolio is methodological.
 
-It shows how a course-based analytics workflow can be upgraded into a more rigorous research-style project by:
+It shows a rigorous research-style project by:
 
 - validating each analytical stage;
 - preserving provenance across different historical data snapshots;
-- correcting fragile or misleading code;
 - maintaining reproducibility when live sources disappear;
 - separating descriptive findings from causal claims;
 - using stronger model-validation strategies;
@@ -224,10 +221,12 @@ It shows how a course-based analytics workflow can be upgraded into a more rigor
 
 ---
 
-## Recommended Repository Structure
+## Repository Structure
 
 ```text
-SpaceX_Falcon9_Analytics/
+SpaceX_Falcon9_1st_Stage_Success_Landing_Prediction/
+│
+├── 00_SpaceX_Falcon9_Data_Analytics_Portfolio_Research_Report.pdf/
 │
 ├── 01_Data_Collection_API/
 ├── 02_Web_Scraping/
@@ -237,11 +236,25 @@ SpaceX_Falcon9_Analytics/
 ├── 06_Geospatial/
 ├── 07_Dashboard/
 ├── 08_Machine_Learning/
-├── report/
+│
+├──data/
+    ├──Spacex.csv
+    ├──spacex_web_scraped.csv
+    ├──spacex_launch_geo.csv
+    ├──spacex_launch_dash.csv
+    ├──dataset_part3_portfolio.csv
+    ├──dataset_part_2_portfolio.csv
+    ├──08_model_performance_summary.csv
+│
+├──figures/
+│
+├──map_html/
+    ├──spacex_launch_site_map.html
+    ├──spacex_launch_site_clustered_map.html
+    ├──spacex_launch_site_proximity_map.html
+│
 └── README.md
 ```
-
-Keep the numbered notebook sequence intact because the analytical stages build on one another.
 
 ---
 
@@ -314,7 +327,7 @@ python spacex_dash-app.py
 
 Important limitations include:
 
-- different stages of the original IBM project use different historical snapshots;
+- different stages of the project use different historical snapshots;
 - the main modeling dataset contains only 90 observations;
 - landing success becomes strongly imbalanced toward success in later years;
 - the feature matrix is high-dimensional relative to sample size;
@@ -328,7 +341,7 @@ Important limitations include:
 
 A full research-style companion report is included with the project:
 
-**SpaceX Falcon 9 Data Analytics & Machine Learning: An End-to-End Applied Analytics Portfolio**
+**SpaceX_Falcon9_Data_Analytics_Portfolio_Research_Report**
 
 The report integrates the eight notebooks into a single research narrative covering motivation, data provenance, methodology, empirical findings, model evaluation, limitations, and relevance to business/data analytics.
 
@@ -363,12 +376,12 @@ Portfolio project prepared as part of a broader application portfolio in busines
 
 ## Acknowledgment
 
-This project builds on the SpaceX capstone from the **IBM Data Science Professional Certificate**.
+This project builds on the SpaceX capstone from the **IBM Data Science Professional Certificate Capstone**.
 
-The original analytical structure and educational datasets provided the foundation. The portfolio version substantially refactors, validates, extends, and interprets the workflow for research-oriented presentation.
+The original analytical structure and datasets provided the foundation. The portfolio version substantially refactors, validates, extends, and interprets the workflow for research-oriented presentation.
 
 ---
 
 ## License
 
-This repository is intended for educational and portfolio use. Verify the licensing terms of third-party datasets, course materials, and external map providers before redistribution.
+This repository is intended for portfolio use. Verify the licensing terms of third-party datasets, materials, and external map providers before redistribution.
